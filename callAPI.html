@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="mypanel"></div>
+	<br>
+    <div class="mPanel"></div>
+    <script>
+     $.get("https://api.github.com/users/unipartdigital", function(data, status){
+		var text = `Key Value Pairs <br>`
+        $(".mypanel").html(text);
+		
+		var text2  = ``
+        for (const [key, value] of Object.entries(data)) {
+		   
+           console.log(`${key} ${value}`);
+		   text2 = text2.concat(`${key} ${value}<br>`)
+		   
+         }
+		 if (text2.length <1){
+		    text2 = `No data found`
+		 }
+		 $(".mPanel").html(text2);
+    });
+    </script>  
+</body>
+</html>
