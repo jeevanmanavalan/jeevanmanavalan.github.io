@@ -1,7 +1,3 @@
-// This calculator works by listening for button clicks,
-// assigning button values to variables, and running JS
-// math calculations to generate a result to display.
-
 $(document).ready(function(){
   var numOne;
   var numTwo;
