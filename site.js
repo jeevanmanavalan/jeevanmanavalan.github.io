@@ -1,3 +1,7 @@
+// This calculator works by listening for button clicks,
+// assigning button values to variables, and running JS
+// math calculations to generate a result to display.
+
 $(document).ready(function(){
   var numOne;
   var numTwo;
@@ -6,6 +10,7 @@ $(document).ready(function(){
   var dotAdded = false;
   var hiddenDisp;
   var singleOp = false;
+  var negBool = false;
 
   // Clear variables and set display to '0'
   function reset() {
@@ -15,24 +20,30 @@ $(document).ready(function(){
     $display.text("0");
 	hiddenDisp = "0";
 	dotAdded = false;
+	negBool = false;
   }
 
   reset();
 
   // Set a 12-digit max on the display
   function testNumLength(number) {
-      if (number.length > 15) {
-        $display.text("too long!");
+      if (number.length > 10) {
+        $display.text(parseFloat(number).toPrecision(7));
+      }
+	  if (number === 'NaN') {
+        $display.text('Illegal Input');
       }
   };
-
 
   $(".numbers a").click(function() {
     var clickDigit = $(this).text();
     var currentVal = hiddenDisp;
     var newVal;
     if (currentVal === "0") {
-      newVal = clickDigit;
+		newVal = clickDigit;
+		if (negBool){
+			newVal = newVal *-1;
+		}
     } else {
       newVal = currentVal + clickDigit;
     }
@@ -53,6 +64,7 @@ $(document).ready(function(){
     numOne = parseFloat(hiddenDisp);
 	hiddenDisp = "0";
 	dotAdded = false;
+	negBool = false;
     $display.text(numOne);
   });
 
@@ -61,6 +73,15 @@ $(document).ready(function(){
 	  singleOp = true;
 	  reset();
 	  $display.text("sqrt()");
+	  
+  });
+  
+   $("#neg").click(function(){
+	  negBool = true;
+	  if (hiddenDisp != 0){
+		  hiddenDisp = hiddenDisp *-1;
+	      $display.text(hiddenDisp);
+	  }
 	  
   });
   

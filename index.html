@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>technical test </title
-</head>
-<body>
-<A HREF="calculator.html">Q9 Calculator</A> 
-<br><br>
-<A HREF="calculator.html">Q14 REACT</A> 
-<br><br>
-<A HREF="callAPI.html">Q15 JS/JSON API</A> 
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Javascript Calculator</title>
+    <meta name="description" content="" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="site.js"></script>
+
+    <link rel="icon" type="image/png" href="https://i.imgur.com/usmiNuN.jpg">
+    <link rel="stylesheet" type="text/css" href="site.css">
+
+    <!-- Internet Explorer HTML5 enabling code -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="arrow-left"></div>
+      <div class="arrow-right"></div>
+      <div class="calculator-inner">
+        <div class="total"></div>
+        <div class="buttons">
+          <span class="operators">
+            <a>+</a>
+            <a>-</a>
+            <a>*</a>
+            <a>/</a>
+			<a>%</a>
+			<a>^</a>
+			<a id="sq">SQRT</a>
+			<a id="clear">C</a>
+          </span>
+          <span class="numbers">
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+            <a>6</a>
+            <a>7</a>
+            <a>8</a>
+            <a>9</a>
+            <a>0</a>
+          </span>
+		  <a id="dot">.</a>
+		  <a id="neg">(-)</a>
+		  <a id="equals">=</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
