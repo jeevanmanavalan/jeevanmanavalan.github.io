@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	
+	Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+<p id="text" style="display:none">Checkbox is CHECKED!</p>
+<br>
+</head>
+<body>
+
+
+    <div class="mypanel"></div>
+	<br>
+    <div class="mPanel"></div>
+    <script>
+	     $.getJSON("https://raw.githubusercontent.com/jeevanmanavalan/jeevanmanavalan.github.io/1b4a91d1a55363d096d2b04c8dc1e25c1cab54f7/api.json", function(data, status){
+		
+
+		function printValues(obj) {
+		var text2 = '';
+        for(var i in obj) {
+            if(obj[i] instanceof Object) {
+                printValues(obj[i]);
+            } else {
+				for(j=0;j<5;j++){
+					if(typeof Object.keys(obj)[j] != "undefined"){
+						document.write(Object.keys(obj)[j] + ":");
+				<!--		text2 = text2.concat(Object.keys(obj)[j] + ":")
+					}
+					if (typeof Object.values(obj)[j] == "object"){
+						continue;
+					}
+					if(typeof Object.values(obj)[j] != "undefined"){
+				<!--	    text2 = text2.concat(Object.values(obj)[j]  + "<br>")
+					    document.write(Object.values(obj)[j]  + "<br>");
+			
+					}
+				}
+ 
+                
+            };
+        }
+		
+        };
+		
+		printValues(data);
+        
+		<!--- 			    document.write(Object.keys(obj)[0] + ": " + obj[i] + "<br>" + " "+ Object.keys(obj)[1] +"<br>");  -->
+   
+
+		 
+    });
+    </script>
+<p>hi </p>	
+</body>
+</html>
