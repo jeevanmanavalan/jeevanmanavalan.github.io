@@ -1,0 +1,214 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    min-width: 1200px; /* Set minimum width for the body */
+    min-height: 100px; /* Set minimum height for the body */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 00px;
+    display: flex;
+    justify-content: center;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -20px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.tv-column, .content-column {
+    flex: 1;
+}
+
+.tv {
+    position: relative;
+    width: 99%;
+    height: 90%;
+    /*margin-right: 0px; */
+    padding-right: 101px;
+    background: url('pc-image.png') no-repeat center;
+    background-size: contain;
+}
+
+.screen {
+    position: relative;
+    padding-top: 100%; /* 16:9 aspect ratio for embedded video */
+    overflow: hidden;
+}
+
+.screen iframe {
+    position: absolute;
+    top: 60px; /* Adjust the top position to move the video down */
+    left: 100px; /* Adjust the left position to move the video right */
+    width: calc(88% - 0px); /* Adjust the width to account for left margin */
+    height: calc(52% - 0px); /* Adjust the height to account for top margin */
+}
+header, footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 800px; /* Adjust the width as needed */
+    height: 450px; /* Adjust the height as needed */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header h1 {
+    font-size: 2em;
+    
+}
+
+header h2 {
+    font-size: 2em;
+}
+
+section {
+    padding: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+}
+
+#connect-link {
+    font-size: 1.2em; /* Adjust the size as needed */
+    font-weight: bold;
+}
+
+
+.column {
+    width: 50%;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.education-entry {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.education-entry:last-child {
+    border-bottom: none; /* Remove border from last entry */
+}
+
+.education-entry h3 {
+    margin-bottom: 5px;
+}
+
+.sub-columns-container {
+    display: flex;
+}
+
+.sub-column {
+    margin-right: 20px; /* Adjust as needed */
+    
+}
+.sub-column2 {
+    margin-top: -12px; /* Adjust as needed */
+    margin-left: -42px; /* Adjust as needed */
+}
+
+.work-experience-list {
+    font-family: Arial, sans-serif; /* Example font family */
+    font-size: 16px; /* Example font size */
+    color: #333; /* Example text color */
+    font-weight: bold; /* Make the text bold */
+    /* Add any other font styles as needed */
+}
+
+.languages {
+    font-family: Arial, sans-serif; /* Example font family */
+    font-size: 16px; /* Example font size */
+    color: #333; /* Example text color */
+    font-weight: bold; /* Make the text bold */
+    /* Add any other font styles as needed */
+}
+
+.work-experience-list .education-entry {
+    margin-bottom: 8px; /* Example margin between entries */
+    /* Add any other specific styles for each entry if needed */
+}
+
+.certifications {
+    text-align: left;
+}
+
+.certification-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+}
+
+.column h3 {
+    font-size: 1.2em;
+}
+
+.image-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.image-list li {
+    margin-bottom: 20px;
+}
+
+.text-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0px;
+    margin-left: -200px; /* Adjust as needed */
+}
+
+.text-list li {
+    margin-bottom: 10px;
+    text-align: left;
+}
