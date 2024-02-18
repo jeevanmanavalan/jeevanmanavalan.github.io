@@ -25,13 +25,37 @@ body {
 .container2 {
     max-width: 1200px;
     margin: auto;
-    margin-top: -20px;
+    margin-top: -40px;
     padding: 20px;
     padding-top: 0px;
     display: flex;
     justify-content: center;
 }
 
+.container3 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container3 ul li {
+    margin-bottom: -15px; /* Adjust the margin-bottom to reduce vertical spacing */
+}
+
+.container3 ul li a {
+    text-decoration: none;
+    color: #007bff; /* Adjust the link color as needed */
+}
+
+.container3 ul li a:hover {
+    text-decoration: underline;
+}
 .tv-column, .content-column {
     flex: 1;
 }
@@ -145,10 +169,11 @@ li {
 
 .sub-column {
     margin-right: 20px; /* Adjust as needed */
+    margin-bottom: -30px; /* Adjust as needed */
     
 }
 .sub-column2 {
-    margin-top: -12px; /* Adjust as needed */
+    margin-top: -20px; /* Adjust as needed */
     margin-left: -42px; /* Adjust as needed */
 }
 
