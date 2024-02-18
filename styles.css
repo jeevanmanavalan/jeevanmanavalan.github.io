@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 60px; /* Adjust the top position to move the video down */
     left: 100px; /* Adjust the left position to move the video right */
-    width: calc(88% - 0px); /* Adjust the width to account for left margin */
+    width: calc(78% - 0px); /* Adjust the width to account for left margin */
     height: calc(52% - 0px); /* Adjust the height to account for top margin */
 }
 header, footer {
@@ -107,8 +107,7 @@ ul li {
 }
 
 #connect-link {
-    font-size: 1.2em; /* Adjust the size as needed */
-    font-weight: bold;
+    font-size: 1em; /* Adjust the size as needed */
 }
 
 
